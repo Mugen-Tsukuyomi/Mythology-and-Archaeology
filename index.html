@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap project</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- fontawsome icons ------------------------------------- -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header --------------------------------------->
+     <header class="bg-success py-2 position-fixed top-0 start-0 w-100 shadow">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand border-end pe-4" href="#">Mythology & Archaeology</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-script-mobIcon>
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown me-1">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Ancient Egypt
+                    </a>
+                    <ul class="dropdown-menu bg-success">
+                      <li><a class="dropdown-item" href="#">Mythology</a></li>
+                      <li><a class="dropdown-item" href="#">Archaeology</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Languages</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown me-1">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Ancient Greece
+                    </a>
+                    <ul class="dropdown-menu bg-success">
+                      <li><a class="dropdown-item" href="#">Mythology</a></li>
+                      <li><a class="dropdown-item" href="#">Archaeology</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Languages</a></li>
+                    </ul>
+                  </li>
+                  <!-- <li class="nav-item me-1">
+                    <a class="nav-link" href="#">Timeline</a>
+                  </li> -->
+                  <li class="nav-item me-1">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="d-flex gap-2" role="search">
+                  <input class="form-control style-input" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-warning" type="submit">Search</button>
+                  <button class="btn btn-outline-warning" type="button" data-bs-toggle="modal" data-bs-target="#login-modal">Login</button>
+                </form>
+                <!-- login modal ---------------------------- -->
+                <div class="modal style-loginModal" tabindex="-1" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false"> <!-- last 2 js attributes to disable closing the login modal by clicking outside -->
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header bg-success">
+                          <h5 class="modal-title">Login</h5>
+                          <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-3">
+                            <form class="px-3 pt-1">
+                                <div class="mb-3">
+                                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                  <input type="email" class="form-control style-input" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                                  <input type="password" class="form-control style-input" id="exampleInputPassword1">
+                                </div>
+                                <div class="form-check form-switch mb-3 ms-4">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success me-auto">Login</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </nav>
+     </header>
+     <!-- social icon links ----------------------------- -->
+      <div class="social-links d-grid position-fixed top-50 end-0 me-3 gap-3 display-5 z-3">
+        <i class="fa-brands fa-square-facebook" style="color: #ffc107;"></i>
+        <i class="fa-brands fa-square-whatsapp" style="color: #ffc107;"></i>
+        <i class="fa-brands fa-square-twitter" style="color: #ffc107;"></i>
+        <i class="fa-brands fa-linkedin" style="color: #ffc107;"></i>
+        <i class="fa-brands fa-square-instagram" style="color: #ffc107;"></i>
+      </div>
+     <main>
+      <!-- first section carousel --------------------------------------------------->
+      <div id="carouselExampleCaptions" class="carousel slide vh-100 h-100 pt-5" data-bs-ride="carousel" data-bs-interval="5000"> <!-- default interval is 5000ms = 5s -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner h-100 pt-4">
+          <div class="carousel-item active h-100">
+            <img src="imgs/anubis 1.webp" class="d-block w-100 h-100" alt="...">
+            <div class="carousel-caption style-carouselCap">
+              <h5 class="fs-3 mb-3 mt-2">The World of Egyptian Gods</h5>
+              <p>Discover the stories and symbols of gods like Anubis, Ra, and Isis, each representing a powerful aspect of life, death, and rebirth.</p>
+              <button class="btn btn-warning mb-2">Explore</button>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="imgs/greek-mythology-iconic-friendships.jpeg" class="d-block w-100 h-100" alt="...">
+            <div class="carousel-caption style-carouselCap">
+              <h5 class="fs-3 mb-3 mt-2">Gods and Heroes of Ancient Greece</h5>
+              <p>From Zeus and Athena to heroes like Hercules, Greek mythology has inspired countless tales of bravery and wisdom.</p>
+              <button class="btn btn-warning mb-2">Explore</button>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="imgs/Hieroglyphics 1.jpg" class="d-block w-100 h-100" alt="...">
+            <div class="carousel-caption style-carouselCap">
+              <h5 class="fs-3 mb-3 mt-2">The Language of the Ancients</h5>
+              <p>Discover the written words that connected civilizations, from Egyptian hieroglyphs to Greek script. These languages offer invaluable insights into the beliefs, trade, and daily lives of ancient societies.</p>
+              <button class="btn btn-warning mb-2">Explore</button>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="imgs/pyramids sphinx1.jpg" class="d-block w-100 h-100" alt="...">
+            <div class="carousel-caption style-carouselCap">
+              <h5 class="fs-3 mb-3 mt-2">Engineering Marvels of the Ancient World</h5>
+              <p>Marvel at the architectural achievements of ancient civilizations, from the Pyramids of Giza to the Acropolis in Athens.</p>
+              <button class="btn btn-warning mb-2">Explore</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- welcome --------------------- -->
+      <div class="shadow-lg rounded-start p-4 bg-success-subtle border border-2 border-success-subtle">
+        <h2 class="gradient-text text-uppercase fs-4">welcome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorum nam ipsa odit adipisci sint qui aspernatur rem earum aliquam ullam veritatis ratione eligendi quas molestias sunt harum, voluptate reprehenderit voluptates cum. Accusantium alias quos magnam explicabo! Sapiente, magnam dolores.</p>
+        <button class="btn btn-warning">Learn more</button>
+      </div>
+      <hr>
+
+      <!-- accordion ------------------------- -->
+       <div class="title-div bg-success p-4 rounded-start text-center mb-3 shadow-lg">
+          <h2 class="accordion-title p-3 text-white">Ancient Wonders of Egypt and Greece</h2>
+       </div>
+
+       <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed gradient-text fw-bold fs-5 shadow-lg z-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Giza Pyramids
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>The Giza Pyramids,</strong> one of the Seven Wonders of the Ancient World, continue to captivate the imagination. Discover the mystery behind <code>the Great Pyramid, the Sphinx, and the intricate burial customs of pharaohs.</code>
+              The site also contains elaborate tombs and temples that highlight ancient beliefs in the afterlife.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold fs-5 shadow-lg z-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Acropolis of Athens
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>The Acropolis in Athens</strong> stands as a tribute to Greek architecture, philosophy, and political influence. Crowned by the Parthenon, this ancient citadel reflects the height of Greek civilization in the 5th century BCE. Visitors can explore the history and mythological significance of temples such as
+               <code>the Erechtheion and the Temple of Athena Nike,</code> each telling stories of Greek deities and Athenian society.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold fs-5 shadow-lg z-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Temples, Statues, and More
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>The awe-inspiring monuments of Egypt and Greece</strong> stretch beyond pyramids and citadels. Marvel at ancient Egyptian temples like <code>Karnak</code> and <code>Luxor</code>, where intricate carvings celebrate gods and pharaohs. In Greece, experience the grandeur of <code>Olympia</code>,
+               the birthplace of the Olympic Games, and the massive statue of Zeus, which was once counted among the Seven Wonders. These sites encapsulate the artistic, spiritual, and intellectual heritage of both civilizations, offering insight into the values and visions that shaped their worlds.
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- translate ------------------------------------------ -->
+       <div class="Hieroglyphic">
+          <div class="title-div bg-success p-2 rounded-start text-center">
+            <h2 class="text-white">Translate From English To Hieroglyphic</h2>
+          </div>
+          <div class="translate-area bg-success-subtle p-4 shadow border border-2 border-success-subtle rounded-start">
+            <p class="fs-5 m-0 ps-1">Write and Translate <span class="translate-span text-success fs-4 style-cursor-pointer">Press Here</span></p>
+            <button class="style-copy position-relative d-block mb-3 mt-2 btn btn-light text-success fw-bold border border-3 border-light-subtle shadow-sm">Copy</button>
+            <textarea class="w-100 rounded py-1 px-2 border border-1 border-success-subtle" placeholder="translate:" rows="4" name="" id=""></textarea>
+          </div>
+       </div>
+       <hr>
+       <div class="Greek">
+        <div class="title-div bg-success p-2 rounded-start text-center">
+          <h2 class="text-white">Translate From English To Greek</h2>
+        </div>
+        <div class="translate-area bg-success-subtle p-4 shadow border border-2 border-success-subtle rounded-start">
+          <p class="fs-5 m-0 ps-1">Write and Translate <span class="translate-span text-success fs-4 style-cursor-pointer">Press Here</span></p>
+          <button class="style-copy position-relative d-block mb-3 mt-2 btn btn-light text-success fw-bold border border-3 border-light-subtle shadow-sm">Copy</button>
+          <textarea class="w-100 rounded py-1 px-2 border border-1 border-success-subtle" placeholder="translate:" rows="4" name="" id=""></textarea>
+        </div>
+       </div>
+       <hr>
+       <div class="Arabic">
+        <div class="title-div bg-success p-2 rounded-start text-center">
+          <h2 class="text-white">Translate From English To Arabic</h2>
+        </div>
+        <div class="translate-area bg-success-subtle p-4 shadow border border-2 border-success-subtle rounded-start">
+          <p class="fs-5 m-0 ps-1">Write and Translate <span class="translate-span text-success fs-4 style-cursor-pointer">Press Here</span></p>
+          <button class="style-copy position-relative d-block mb-3 mt-2 btn btn-light text-success fw-bold border border-3 border-light-subtle shadow-sm">Copy</button>
+          <textarea class="w-100 rounded py-1 px-2 border border-1 border-success-subtle" placeholder="translate:" rows="4" name="" id=""></textarea>
+        </div>
+       </div>
+       <hr>
+
+       <div class="style-cover" style="background-image: url(imgs/pyramids1.jpg);"></div>
+       
+       <div class="title-div bg-success p-4 rounded-start text-center shadow">
+        <h2 class="gradient-text">Explore The Ancient World</h2>
+      </div>
+
+      <!-- cards ---------------------------------------------- -->
+       <div class="container-fluid">
+        <div class="row gap-5 py-5 my-1">
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/egypt methology.avif" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">Egyptian Mythology</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Unveil the rich pantheon of Egyptian mythology, where gods like Osiris, Isis, and Horus held influence over life, death, and the mysteries of the afterlife.</p>
+            </div>
+          </div>
+  
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/Hieroglyphics Language _ History-webp.webp" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">Hieroglyphic Language</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Discover the language of the pharaohs through Egyptian Hieroglyphs, a system of symbols and pictures that reveals stories, religion, and history of ancient Egypt.</p>
+            </div>
+          </div>
+  
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/Zeus, Athena, Poseidon, and Hercules with the Parthenon.jpg" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">Greek Mythology</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Dive into the world of Greek mythology, where gods and heroes like Zeus, Athena, and Hercules shaped tales of power, heroism, and human destiny.</p>
+            </div>
+          </div>
+
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/Alexandria's_Bibliotheca.jpg" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">Library of Alexandria</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Uncover the mysteries of the Library of Alexandria, once the largest repository of knowledge in the ancient world, attracting scholars from across the globe.</p>
+            </div>
+          </div>
+  
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/parthenon-athens-greece.jpg" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">The Parthenon</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Marvel at the Parthenon on the Acropolis, a symbol of ancient Greece's cultural and architectural achievements and home to Athena's grandeur.</p>
+            </div>
+          </div>
+  
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/great-sphinx.webp" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">The Great Sphinx</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Witness the mystery of the Great Sphinx, the ancient guardian of Giza, carved from limestone and symbolizing ancient Egypt's enigma and power.</p>
+            </div>
+          </div>
+
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/abu-simbel2.jpg" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">Temple of Abu Simbel</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Experience the grandeur of Abu Simbel, a magnificent rock-cut temple in Egypt commissioned by Pharaoh Ramses II to honor gods and queens.</p>
+            </div>
+          </div>
+  
+          <div class="card col-lg-3 col-md-5 col-sm-12 mx-auto shadow style-card-after">
+            <img src="imgs/delphi-12-636x636.webp" class="card-img-top shadow" height="400">
+            <div class="card-body position-relative">
+              <h5 class="card-title">Delphi</h5>
+              <a href="#" class="btn btn-warning position-absolute top-0 end-0 mt-3 z-1">Know More</a>
+              <p class="card-text mt-3">Known as the center of the world in ancient Greek mythology, Delphi was home to the Oracle of Apollo, where pilgrims sought divine guidance.</p>
+            </div>
+          </div>
+         </div>
+        </div>
+
+       <div class="style-cover shadow-lg" style="background-image: url(imgs/600_Etnousta_egyptian_hieroglyphs_ancient_egypt_letters_papyru.jpg);"></div>
+        <hr>
+
+        <!-- THANKS FOR --------------------------------------- -->
+        <div class=" bg-success-subtle p-4 rounded-start text-center shadow border border-2 border-success-subtle">
+          <h2 class="gradient-text p-1">THANKS FOR</h2>
+        </div>
+
+        <div class="container">
+          <div class="row py-5 px-2 style-thanksRow">
+            <div class="thanks-card text-white shadow p-4 col-lg-3 col-sm-12 col-12 mx-auto">
+              <div class="background-img" style="background-image: url(imgs/anubis\ 1.webp);"></div>
+              <div class="background-linear"></div>
+              <div class="top p-2">
+                <h5>All thanks and appreciation</h5>
+                <span class="style-small-fs"><i class="fa-regular fa-clock"></i> October 14, 2024</span>
+              </div>
+              <div class="bottom position-absolute bottom-0 start-0 p-4">
+                <div class="bottom-content px-2">
+                  <img class="border border-2 border-success-subtle shadow-sm rounded-circle" src="imgs/anubis 1.webp">
+                  <h6 class="m-0">Eng. Anubis</h6>
+                  <span class="style-small-fs">Director of UI/UX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="thanks-card text-white shadow p-4 col-lg-3 col-sm-12 col-12 mx-auto">
+              <div class="background-img" style="background-image: url(imgs/zeus-image.png);"></div>
+              <div class="background-linear"></div>
+              <div class="top p-2">
+                <h5>All thanks and appreciation</h5>
+                <span class="style-small-fs"><i class="fa-regular fa-clock"></i> October 14, 2024</span>
+              </div>
+              <div class="bottom position-absolute bottom-0 start-0 p-4">
+                <div class="bottom-content px-2">
+                  <img class="border border-2 border-success-subtle shadow-sm rounded-circle" src="imgs/zeus-image.png">
+                  <h6 class="m-0">Eng. Zeus</h6>
+                  <span class="style-small-fs">Director of UI/UX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="thanks-card text-white shadow p-4 col-lg-3 col-sm-12 col-12 mx-auto">
+              <div class="background-img" style="background-image: url(imgs/Anck-Su-Namun.jpeg);"></div>
+              <div class="background-linear"></div>
+              <div class="top p-2">
+                <h5>All thanks and appreciation</h5>
+                <span class="style-small-fs"><i class="fa-regular fa-clock"></i> October 14, 2024</span>
+              </div>
+              <div class="bottom position-absolute bottom-0 start-0 p-4">
+                <div class="bottom-content px-2">
+                  <img class="border border-2 border-success-subtle shadow-sm rounded-circle" src="imgs/Anck-Su-Namun.jpeg">
+                  <h6 class="m-0">Eng. Anck-Su-Namun</h6>
+                  <span class="style-small-fs">Director of UI/UX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-success mt-5 p-1 fw-bold">/thanks card --></div>
+        <hr>
+
+        <!-- Horizontal Cards Section -->
+        <div class="text-center mt-5 mb-4">
+          <h2 class="gradient-text">Egypt News</h2>
+        </div>
+        <div class="Horizontal-cards container px-4">
+
+          <div class="card mb-5 border-0">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 overflow-hidden rounded-start h-100 style-H-cards-img">
+                <img src="imgs/anubis 1.webp" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-lg-5 p-4 d-flex flex-column h-100">
+                  <h5 class="card-title fs-2">Podcast Title</h5>
+                  <p class="date fw-bold"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptas, nemo consequuntur quod dolorum, voluptatibus aspernatur est commodi deserunt repellat molestiae ipsum dolores facilis eveniet, accusamus incidunt veniam quos quis maxime quam! Excepturi, unde! Sed labore corrupti mollitia fugiat, accusantium necessitatibus alias voluptatibus nemo vitae dolores maxime quasi error quo.</p>
+                  <ul class="hover-btns mt-auto p-0 m-0">
+                    <li class="btn"><i class="fa-solid fa-tag"></i> Podcast</li>
+                    <li class="btn"><i class="fa-solid fa-clock"></i> 55 mins.</li>
+                    <li class="btn play"><a href="#"><i class="fa-solid fa-play"></i> Play Episode</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5 border-0">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 overflow-hidden rounded-start h-100 style-H-cards-img">
+                <img src="imgs/Achilles 3.webp" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-lg-5 p-4 d-flex flex-column h-100">
+                  <h5 class="card-title fs-2">Podcast Title</h5>
+                  <p class="date fw-bold"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptas, nemo consequuntur quod dolorum, voluptatibus aspernatur est commodi deserunt repellat molestiae ipsum dolores facilis eveniet, accusamus incidunt veniam quos quis maxime quam! Excepturi, unde! Sed labore corrupti mollitia fugiat, accusantium necessitatibus alias voluptatibus nemo vitae dolores maxime quasi error quo.</p>
+                  <ul class="hover-btns mt-auto p-0 m-0">
+                    <li class="btn"><i class="fa-solid fa-tag"></i> Podcast</li>
+                    <li class="btn"><i class="fa-solid fa-clock"></i> 55 mins.</li>
+                    <li class="btn play"><a href="#"><i class="fa-solid fa-play"></i> Play Episode</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5 border-0">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 overflow-hidden rounded-start h-100 style-H-cards-img">
+                <img src="imgs/Hieroglyphics 1.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-lg-5 p-4 d-flex flex-column h-100">
+                  <h5 class="card-title fs-2">Podcast Title</h5>
+                  <p class="date fw-bold"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptas, nemo consequuntur quod dolorum, voluptatibus aspernatur est commodi deserunt repellat molestiae ipsum dolores facilis eveniet, accusamus incidunt veniam quos quis maxime quam! Excepturi, unde! Sed labore corrupti mollitia fugiat, accusantium necessitatibus alias voluptatibus nemo vitae dolores maxime quasi error quo.</p>
+                  <ul class="hover-btns mt-auto p-0 m-0">
+                    <li class="btn"><i class="fa-solid fa-tag"></i> Podcast</li>
+                    <li class="btn"><i class="fa-solid fa-clock"></i> 55 mins.</li>
+                    <li class="btn play"><a href="#"><i class="fa-solid fa-play"></i> Play Episode</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5 border-0">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 overflow-hidden rounded-start h-100 style-H-cards-img">
+                <img src="imgs/Greek-mythology-symbols.webp" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-lg-5 p-4 d-flex flex-column h-100">
+                  <h5 class="card-title fs-2">Podcast Title</h5>
+                  <p class="date fw-bold"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptas, nemo consequuntur quod dolorum, voluptatibus aspernatur est commodi deserunt repellat molestiae ipsum dolores facilis eveniet, accusamus incidunt veniam quos quis maxime quam! Excepturi, unde! Sed labore corrupti mollitia fugiat, accusantium necessitatibus alias voluptatibus nemo vitae dolores maxime quasi error quo.</p>
+                  <ul class="hover-btns mt-auto p-0 m-0">
+                    <li class="btn"><i class="fa-solid fa-tag"></i> Podcast</li>
+                    <li class="btn"><i class="fa-solid fa-clock"></i> 55 mins.</li>
+                    <li class="btn play"><a href="#"><i class="fa-solid fa-play"></i> Play Episode</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- JOIN US ------------------------------------------ -->
+        <div class="text-center mt-5 mb-4">
+          <h2 class="gradient-text">JOIN US</h2>
+        </div>
+        <div class="join-us-social container">
+
+          <div class="row mb-4 justify-content-center align-items-center gap-4 gap-md-5" style="color: rgb(116, 83, 0);">
+            <div class="social-div text-center col-6 col-sm-4 col-lg-2 py-3 rounded" style="box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5);">
+              <h4 class="social-title">Subscribe Now</h4>
+              <img src="imgs/twitter-3d-bg-black-transparent.png" alt="twitter" class="social-img my-2" style="height: 70px; box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5); border-radius: 22px;">
+              <h5 class="social-link style-cursor-pointer">Go to link</h5>
+            </div>
+  
+            <div class="social-div text-center col-6 col-sm-4 col-lg-2 py-3 rounded" style="box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5);">
+              <h4 class="social-title">Follow</h4>
+              <img src="imgs/whatsapp-3d-bg-black-transparent.png" alt="twitter" class="social-img my-2" style="height: 70px; box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5); border-radius: 22px;">
+              <h5 class="social-link style-cursor-pointer">Go to link</h5>
+            </div>
+  
+            <div class="social-div text-center col-6 col-sm-4 col-lg-2 py-3 rounded" style="box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5);">
+              <h4 class="social-title">Like the page</h4>
+              <img src="imgs/linkedin-3d-bg-black-transparent.png" alt="twitter" class="social-img my-2" style="height: 70px; box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5); border-radius: 22px;">
+              <h5 class="social-link style-cursor-pointer">Go to link</h5>
+            </div>
+  
+            <div class="social-div text-center col-6 col-sm-4 col-lg-2 py-3 rounded" style="box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5);">
+              <h4 class="social-title">Watch videos</h4>
+              <img src="imgs/instagram-3d-bg-black-transparent.png" alt="twitter" class="social-img my-2" style="height: 70px; box-shadow: 1px 1px 30px 2px rgba(25, 135, 84, 0.5); border-radius: 22px;">
+              <h5 class="social-link style-cursor-pointer">Go to link</h5>
+            </div>
+          </div>
+
+        </div>
+      
+     </main>
+
+     <footer class="bg-success text-white text-center overflow-hidden w-100">
+      <div class="row px-2">
+
+        <div class="col-12 col-lg-4 col-md-6">
+          <hr class="rounded">
+          <div class="logo-div">
+            <img src="imgs/logo.png" alt="logo" class="logo sun rounded-circle" style="height: 70px; filter: brightness(1.5);
+            background: radial-gradient(circle, rgba(255, 223, 0, 1) 60%, rgba(255, 255, 0, 0.6) 80%);
+            box-shadow: 
+              0 0 20px rgba(255, 223, 0, 0.8),
+              0 0 50px rgba(255, 223, 0, 0.6),
+              0 0 100px rgba(255, 223, 0, 0.4),
+              0 0 150px rgba(255, 223, 0, 0.2);
+              box-shadow: 
+                0 0 10px #198754,
+                0 0 30px #198754,
+                0 0 60px #198754,
+                0 0 90px #198754;">
+            <span class="fs-5 ms-1">Good Company</span>
+          </div>
+          <hr class="rounded">
+          <div class="content-div">
+            <p>Tel : 000-000-000</p>
+            <p>Address : EGYPT</p>
+            <p>Fax : 000-000-000</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 order-md-3 order-lg-0">
+          <hr class="rounded">
+          <div class="logo-div">
+            <img src="imgs/logo.png" alt="logo" class="logo sun rounded-circle" style="height: 70px; filter: brightness(1.5);
+            background: radial-gradient(circle, rgba(255, 223, 0, 1) 60%, rgba(255, 255, 0, 0.6) 80%);
+              box-shadow: 
+                0 0 10px #198754,
+                0 0 30px #198754,
+                0 0 60px #198754,
+                0 0 90px #198754;">
+            <span class="fs-5 ms-1">Important links</span>
+          </div>
+          <hr class="rounded">
+          <div class="content-div text-black">
+            <p><a href="#" class="footer-link">Visit Us</a></p>
+            <p><a href="#" class="footer-link">Take a look</a></p>
+            <p><a href="#" class="footer-link">Your health is more important</a></p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 col-md-6">
+          <hr class="rounded">
+          <div class="logo-div">
+            <img src="imgs/logo.png" alt="logo" class="logo sun rounded-circle" style="height: 70px; filter: brightness(1.5);
+            background: radial-gradient(circle, rgba(255, 223, 0, 1) 60%, rgba(255, 255, 0, 0.6) 80%);
+              box-shadow: 
+                0 0 10px #198754,
+                0 0 30px #198754,
+                0 0 60px #198754,
+                0 0 90px #198754;">
+            <span class="fs-5 ms-1">Vision</span>
+          </div>
+          <hr class="rounded">
+          <div class="content-div">
+            <p>Services for all</p>
+            <p>Provide best services</p>
+            <p>You will be better than before</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="copyrights-div pb-4 title-div">
+        <hr>
+        <span class="fs-5 gradient-text">COPYRIGHT &copy; 2024-11-17 MOHAMED ALY. MUGEN TSUKUYOMI. ALL RIGHTS</span>
+        <hr>
+      </div>
+      
+    </footer>
+     
+     <!-- proper.js ------------------------------------------- -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+     <!-- bootstrap.js ---------------------------------------- -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
