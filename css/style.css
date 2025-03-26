@@ -39,9 +39,11 @@ a {
     font-weight: bold;
     border-color: #000000A6 !important;
 }
-@media (max-width: 350px) {
+@media (max-width: 385px) {
     .navbar .navbar-brand {
         font-size: 18px;
+        padding-right: 18px !important;
+        margin-right: 15px !important;
     }
 }
 .navbar .nav-link.active {
